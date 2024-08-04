@@ -14,9 +14,13 @@ JOBS = [
 
 #app.route decorator,with '/' as the argument
 @app.route("/")
-def jobs():
+def home():
   return render_template('home.html',jobs=JOBS)
 
+@app.route("/about")
+def about():
+  return render_template('about.html')
+  
 #api for the jobs
 @app.route("/api/jobs")
 def api_jobs():
