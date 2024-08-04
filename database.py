@@ -17,4 +17,14 @@ def load_jobs_from_db():
       jobs_dict_list.append(row)
     return jobs_dict_list
     
-  
+
+def get_job_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(
+      text("SELECT * FROM jobs WHERE id = :val"),{'val':id})
+    columns = result.keys()
+    row = result.fetchone()
+    if row:
+      return dict(zip(columns,row))
+    else:
+      return None

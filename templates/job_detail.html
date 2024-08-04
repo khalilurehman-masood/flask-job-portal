@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+
+<div class='row border-top'>
+  <h3 class='text-center mt-4 mb-2'> Title: {{job.get('title')}}</h3>
+  <div class='col-9'>
+     <div class='text-bold'><h4>Location:</h4> {{job.get('location')}}</div>
+     <div><h4>Salary: </h4>{{job.get('currency')}} {{job.get('salary')}}</div>
+     <div><h4>Responsibilities: </h4> {{job.get('responsibilities')}}</div>
+     <div>
+       <h4>Requirements: </h4> {{job.get('requirements')}} 
+     </div>
+    <div class= 'text-center m-2 py-3'>
+    <a href='mailto:contact@jobportal.com' class='btn btn-primary btn-lg' >Apply now</a> 
+      </div>
+  </div>
+</div>
