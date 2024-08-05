@@ -9,3 +9,5 @@
 3) apply to jobs form.
 4) Database connection using SQLAlchemy
 5) simple API routes, for demonstrations.
+
+Note: currently data stored into database using workbench.
