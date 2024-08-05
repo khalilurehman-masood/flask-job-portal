@@ -11,7 +11,9 @@
        <h4>Requirements: </h4> {{job.get('requirements')}} 
      </div>
     <div class= 'text-center m-2 py-3'>
-    <a href='mailto:contact@jobportal.com' class='btn btn-primary btn-lg' >Apply now</a> 
+    <a href="{{ url_for('apply_form',id=job.get('id'))}}" class='btn btn-primary btn-lg' >Apply now</a> 
       </div>
   </div>
 </div>
+
+{% include 'footer.html' %}
